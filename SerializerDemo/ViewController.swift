@@ -1,7 +1,10 @@
 import UIKit
 
+@MainActor
 class Printer {
-    func doPrint(_ value: Int) {
+    // long-running process
+    func doPrint(_ value: Int) async throws {
+        try await Task.sleep(for: .seconds(2))
         print(value)
     }
 }
@@ -14,11 +17,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Task { 
+        Task {
             await serializer.startStream { @MainActor [weak self] value in
                 print("starting long-running process", value)
-                try await Task.sleep(for: .seconds(2))
-                self?.printer.doPrint(value)
+                try await self?.printer.doPrint(value)
             }
         }
     }
