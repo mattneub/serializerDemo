@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9h4-yx-mse">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ShI-xJ-k5g">
+            <objects>
+                <navigationController id="9h4-yx-mse" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yYl-Vn-5U2">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rOe-GK-ltI" kind="relationship" relationship="rootViewController" id="pfW-il-gRp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDs-OB-ULa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1858" y="22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CIb-yI-xgc">
+            <objects>
+                <viewController id="rOe-GK-ltI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIm-NE-RgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6jm-re-Kup"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6fa-gf-Ccv">
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="Scb-pF-KMn">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="erF-pm-o6L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcI-dn-ijg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1092" y="37"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SerializerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-V1-8Yf">
+                                <rect key="frame" x="80" y="233" width="233" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tap This Button Repeatedly"/>
+                                <connections>
+                                    <action selector="doCountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UK2-Pq-TjT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vO-y6-41S">
+                                <rect key="frame" x="158" y="346" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="doCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJv-gV-rPx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8vO-y6-41S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0hw-HC-OWr"/>
+                            <constraint firstItem="8vO-y6-41S" firstAttribute="top" secondItem="VSQ-V1-8Yf" secondAttribute="bottom" constant="78" id="8yL-wr-sAZ"/>
+                            <constraint firstItem="VSQ-V1-8Yf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S7m-zU-2uY"/>
+                            <constraint firstItem="VSQ-V1-8Yf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="TsM-aI-bK6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NhW-LO-5Lh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295" y="51"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
